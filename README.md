@@ -1,25 +1,28 @@
 # Verilog
-Verilog Learning 
-                                                                      Verilog
+   Verilog Learning 
+   
+   
+                                                        Verilog
        *Verilog is used for Digital Hardware design or It is used for describing behavior of hardware.
        *IEEE Standard 1364-1995
        *IEEE Standard 1800(in 2009)
        *First Appeared 1984
- Properties of Verilog 
- *Abstraction 
-      ---Independent of technology
- *Concurrency
-      ---Speed up the performance 
- *Vendor Neutrality 
-      ---No monoploy
-      ---code independency 
- *Re-Usability
-      ---Reduce design cycle 
- *Scalability 
-      ---Flexibilty in design 
- *Ease of Debugging 
-      ---Flexibility in Coding 
-   
+       -------------------------------------------------------------------------------------------------------------------------------
+                                                           Properties of Verilog 
+       *Abstraction 
+             ---Independent of technology
+       *Concurrency
+             ---Speed up the performance 
+      *Vendor Neutrality 
+             ---No monoploy
+             ---code independency 
+      *Re-Usability
+            ---Reduce design cycle 
+      *Scalability 
+           ---Flexibilty in design 
+     *Ease of Debugging 
+           ---Flexibility in Coding 
+   -------------------------------------------------------------------------------------------------------------------------------------
    
                                                       Operators in Verilog 
                           Verilog Operators 
@@ -98,8 +101,8 @@ Verilog Learning
            a = 3'b101  (5)    ,    b = 3'b100  (4)
            y = (a > b) ? (a+b) :(a-b)          y = 4'b1001
            y = (a == b) ? (~a) : (a & b)       y = 3'b100
-
-                                                              _Syntax_ in _VERILOG_
+        ---------------------------------------------------------------------------------------------------------------------------------------
+                                                       _Syntax_ in _VERILOG_
 
        1: Comments
            It makes the code more readable so use many .
@@ -341,103 +344,69 @@ Verilog Learning
                                       32'h12F5_DCB5; // _separates 16 bit numbers Ox123 = 16'h123
 
                             B: UNSIZED : NUMBERS WITHOUT BASE FORMAT
+                                         Number without base format is decimal numbers by default...
+                                         Eg: Integer a= 2347; // no base format so value = decimal 2347
+                                             Integer a= 'o12 ;// no size so a=32'o0000_0012
+                                             Integer a= 'h1234; // no size a = 32'h0000_1234
+                                             
+                       CODE FOR D FLIP_FLOP
+                               module diff_p(q,d,clk,rst);  // Module def. d (identifier)
+                               input  clk,d,rst;            //Input
+                               output q;                    //Output
+                               reg q;
+                                 //always @ (posedge clk or posedge rst)
+                                 /*
+                                 begin
+                                 if (rst)
+                                 q<=1b'0;                            multiple comment
+                                 else
+                                 q<=d
+                                 end
+                                 endmodule                      (keyword) predefined
+                                 */
+           --------------------------------------------------------------------------------------------------------------------------------------------
 
-Number without base format is decimal numbers by default...
+                                DATA Types in Verilog
+             Data types tell the type of data variable can have (in digital world its mostly bits)
+             A Hardware circuit can have one of four values
+                         ----------------------------------------------------
+                            0     represents logic zero, false condition.
+                            1     represents logic one, true condition
+                            X     unknown logic (can be 1 or 0) 
+                            Z     High impedance floating value
+                         ------------------------------------------------------
+                            1      represents voltage anywhere between 0.8v to 5v (depends of fabrication technology)
+                            0      represents voltage less than 0.8V to ov (depends on fabrication technology used)
+                            X      unknown value initally and can be either 1 or 0 
+                            Z     any unconnected circuit gives high impedance (need to be taken care)
 
-Eg: Integis a= 2347; // no base format so value - decimal 2347
+                      Verilog data type are types
+                                  ↳ 1: Net data 
+                                  ↳ 2: Register data type
+                                             Net (Wire, trior, triand etc..) 
+                                             Register (reg, Integer, real, time)
+                                      These are all keyword
 
-Integer = '012 :// no size 30 a-3200000012
+                      Net data type
+                These are used to connect logic gates. It doesn't Store any value on its own in digital logic design mostly wire is used.
+                It is used when there is a continious assignment or to drive a circuit. It is most like a electrical wire to connect 2 component.
+         -By default all the data types are wire (default value = z) 
+           Eg: wire a; // single net
+           wire [2:0] a; // multiple net
+                        // a [2], a[1],a[0] combined together
 
-integer a='h1234; // no pia
-
-h0000-1234
-
-
-
-Code for
-
-module
-
-Youtput
-
-D
-
-flip flop
-
-Indatifies
-
-diff -p (q, d, clk, rst); // module dif
-
-drst
-
-11 aways @ (posedge alli or posedge ast))
-
-begin
-
-if (ist)
-
-end
-
-endmodule
-
-multiple comment
-
-(keyword) predefined
-
-
-DATA Types in Veritag
-
-nata types tell the type of data in variable can have (in digital world its mostly bits) A Hardware ekt can have one 4 Values
-
-represents logic zolo, false condition.
-
-represents logic one, true condition
-
-un known logic (can be 1 x 0) High impedance floating value
-
-Represents voltage anywhere between 0.80 to 5v.
-
-(depends of fabrication technology) represente voltage less than 0.8V to ov
-
-(diperds on fabrication technology used) X- unknown value instally and can be either 1040 2- any unconneded cut gives high impedance (need to be taken care)
-
-Yerilog data type are types
-
-Net data ↳ Register data type Net (wise
-
-thier, trand etc..) Register (reg, Integel, seal, time)
-
-These are all keyword
-
-
-Net data type
-
-There are wed to connect logic gates. It doesn't Store valve any on its own u digital logic wire is used. It is wand schen... design mostly there is a continious assignment on to dolwe a acosande circuit. His most Ilke a clistical wise to connect 2 componente.
-
--By default all the data types are whre (default) 9 wire ai // single not
-wire [2:0) a: 11 multiple net 11a (2), a[1],9[0] combined together
-
-AN
-
-Out
-
-FF
-
-out
-
-ed
-
-Register data type
-
-3: it is used to present a valiable and can store data beturen assigments. So it is used to Model hardware registars (constructed from
-
-flip flop) to store I or more hits. It can allo stope combinational logie. It's default value is X and unsigned integue.
-
-Number of bits it can store depende architecture
-
-reg a', // gove I bit // so I bit flip flop reg. [io] a // ton 4 bit /14 no. of 1 bit tip flop
-
-To hold data →g Continuces assimmet Date "Lowite (no
+                     Register data type
+                reg: it is used to represent a variable and can store data between assigments. 
+                     So it is used to Model hardware registers (constructed from flip flop) to store 1 or more bits.
+                     It can also store combinational logie. 
+           It's default value is X and unsigned integer.
+           Number of bits it can store depends on the system architecture
+               Eg: reg a; // gove 1 bit
+                   reg [3:0] a; // store 4 bit
+                                // 4 number of 1 bit flip flop 
+          To hold data →reg 
+             Continuces assignment
+                         ↳ wire (no data storage )
 
 Integes:
 
