@@ -1,5 +1,5 @@
 # Verilog
-   Verilog Learning 
+   wanna learn Verilog ??? 
    
    
                                                         Verilog
@@ -408,229 +408,143 @@
              Continuces assignment
                          ↳ wire (no data storage )
 
-Integes:
-
-It is signed integes variable of en bit wide. It's a general purpose registes data type for
-
-manipulating quantities. default met width is boot maching stze (at least 32 bit) 6.
-
-Eg: integer countes: tritiel intitial Same
-
-counter = 1;
-
-real:
-
-It stores signed floating point value and Loff to nearest integer when assigned
-
-to an integer. It's default value = 0;
-
-Eg: real float; avariable initial
-
-float = 4e10; // 4x 10 b
-
-time:
-
-Its an unsigned integu valiable and 64 bit wicke It is used to store simulation time during debugging
-
-Eg: time sim time: 1/4 stores simulation time in
-
-test barch • Homing parameter.
-
-
-strings:
-
-It is nothing but a sequence of character enclosed. in double "") H is stored in mag variable Here each char. Is s byte to reg be large enough to hold data.
-
-module strings (); reg
-
-Me declare a register Lavable of 28 byte (alshyt initial (24
-
-begin
-
-string="hello verilog world", $ display ("1.s n", string); end
-
-endmodule
-
-Output: hello verilog world
-
-
-Vector and Array in Veriny
-
-Vector in Verily
-
-digital design flipflop is used to store & bit data and if more no. of bits then it is syiste.. -Key word (reg) and (wife) is used to declare
-
-reg (30) a 11 Solene I bit dato and called se ALAR 11 stay 4 bit data and called VECTOR
-
-11MSB = 3, LSB=0 // we start with rightmost (0) and more to left most (3)
-
-reg [3:0] a; // store 4 bit data and called vectop 11 HSB=0 LSB=3 11 we start with leftmest [3] and move to right mouth
-
-wise a; // stose I bit and called Scalar wise [4:0] as stove 5 bit and called [vected wix [0:4) a; // stail 5 bit and called vector
-
-Syntax: wire [MSB: LSB] O jeg [MSB: LSB). The lift number is always MSB -HSB and LSB should be constant and can't he
-
-Ⓒ reg [0:0]; // not allowed // variable niside 1
-
-a[1] [2) alú alo)
-
-MSB [258] alya(y) 9 (1)
-
-
-F2
-
-b₂
-
-bs=gr
-
-by = b 084
-
-bg= 4 ga
-
-b₁ = ₂ gi
-
-bo = "²bi@go
-
-module Gray binary # (parameke N=*)
-
-imput (N-1:0] gadg
-
-3 output wire [N-1: 0]b_8 wire [N-1:0] Jemp.
-
-assign temp (N-1) = 2_1(N-1); gerivar P
-
-generate
-
-for (i-N- 2; 1>= 0; i = 1-1)
-
-begin assign tempo (i) = tmmplit() og i();
-
-end end generales
-
-
-Any individual bit of a vectal can be sepat selected and assigned to a new Var. [g: reg [8:0] count;
-
-Count [3] =j'b1; //assigned to I MBB Count [2] = 1'60; ll assigned to o to bit nos Even some portion of vector can also be selected and
-
-assigned
-
-Eg: reg 17:0] count;
-
-Count [6:4] =3¹b110;
-
-Xesto: Arraycy choy
-
-A vector is a single element that is bits wide but arrays are multiple elements that are I bit or n-bit wide.
-
-It is allowed for kg, integal, time and real
-
-data typer.
-
-Eg: integer count [o:7 ] ; 11 array having
-
-Integer [0:7] count; // Vector 01234567 Integer matrix [2:0] [70] // array² [
-
-reg [20] mem [0:1] // 2
-
-xg Hem [2] =g² bl10; //
-
-9
-
-23
-
-101
-
-R C
-
-[2:0] mem [0:¹] [0: 2] 11 away
-
-veg = 6000
-
-mem [1] [2] = 8' boll mem [2][1] = 3 bol;
-
-Yevlog Code
-
-module pracarray(); reg [2:0] a [d²3] [0²4];
-
-initial
-
-begin
-
-a 10 (0) = 3' bood; a[0][1] = 3²6001; a[0) (2)=116011
-
-a [1][0] 3'b 101 a [12 (1) = 31 b | 10,
-
-[1] [2] =3611; 9/1) (3) - 3000
-
-all][4] = 3 bool;
-
-9[2][6] =36010 a(²) (1) = 1² boll a[2][2] =31b 100; a[2][2] = 3 6 101
-
-a [2][4] = 36 110
-
-[3][0]-gb 111; a[3] [1] = 3 1000
-
-a (3) 12) = 36001) a[3] [3] = ?' xxx;
-
-$display (a (o) (1) = vibu & display ( 9 (²
-
-& display (9[3] [3) = 1.b. 93 { display are 4) = 4. b, a (1)
-
-end
-
-endmodule
-
-AR SO
-
-Date Page
-
-یا
-
-XXX
-
-[1] [4] 001
-
-
-Module in Verilog (stucture in Verllog)
-
-Moctub :
-
-This to the basic building blocks in velilog. It can be a single element or collection of bactes. # hides internal Implementation
-
-Syntax: module <name of module> <terminal portlist?).
-
-< post declaration>
-
-a functionality)
-
-endmodule // mo at the end
-
-keyword Module and endmodule are - Module represents the design that implements the certai
-
-behavioral chas.
-
-- All vovable declaration, terminal port, functionality dings are defined within module and endmodule
-wo can include module within module is called module instantiation
-
-Module can be seusedus
-
-Eg: module counter ();
-
-end module
-
-
-Modules are connected by ports. A part can be input output on Inout Rame name not used for different ports,
-
-£g: module and get (a, b,y); garf mput ANDOT Yout
-
-input by //mput a, b, output modil y's ll output pourt b-D y assign y=a&b; "gives sexult
-
-end module: module and gt (Input a infot , tht ()
-
-assign y-a&b: 11 given result and mochile
-
-Port are used to send or receive data from outsid, she world.
-
-Syntax: input (not type> <rage> input bout name: in out (not type> <rayey thout port sans outfit < not typey <manger outfact pat name",
-
-Input- design modul recolves from outfurt ung
+         Integer:
+            It is signed integer variable of 32 bit wide. It's a general purpose register data type for manipulating quantities.
+            Its default width is host machine word size (at least 32 bit)
+               Eg: integer countes; 
+               intitial
+               counter = 1;
+
+         Real:
+            It stores signed floating point value and rounded off to nearest integer when assigned to an integer.
+            It's default value = 0;                               [a = 4.3]
+                Eg: real float;                                   [a = 4  ]
+                initial                                           [a = 4.8]
+                float = 4e10; // 4X10 ^10                         [a = 5  ]
+
+         Time:
+            Its an unsigned integer variable and 64 bit wide. It is used to store simulation time during debugging.
+               Eg: time sim_time; // it stores simulation time in ns or ps
+                                                     test bench • timing parameter
+         Strings:
+            It is nothing but a sequence of character enclosed in double "". It is stored in reg variable 
+            Here each char is 1 byte so reg variable should be large enough to hold data.
+                            module strings ();
+                            reg[8*28:0] string;  // declare a register variable of 28 byte
+                            initial
+                            begin
+                            string = "hello verilog world", 
+                            $ display ("%s \n", string); 
+                            end
+                            endmodule
+                    Output: hello verilog world
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+                             Vector and Array in Verilog
+                                 Vector in Verilog
+      In digital design flipflop is used to store 1 bit data and if more no. of bits then it is register.
+            -Key word (reg) and (wire) is used to declare vector
+         Eg: reg a; // Store 1 bit data and called SCALAR 
+             reg [3:0] a; // store 4 bit data and called VECTOR
+                          // MSB = 3, LSB=0 
+                          // we start with right most (0) and move to left most (3)
+             reg [3:0] a; // store 4 bit data and called vector
+                          // MSB=0, LSB=3 
+                          // we start with leftmost [3] and move to right most[0]
+             wire a; // store 1 bit and called Scalar 
+             wire [4:0] a; // store 5 bit and called vector
+             wire [0:4] a; // staore 5 bit and called vector
+                     Syntax: 
+                          wire [MSB: LSB] or reg [MSB: LSB];
+                       --The left number is always MSB 
+                       --MSB and LSB should be constant and can't be variable;
+                           reg [a:0]; //not allowed
+                                     //variable inside[]
+                    module gray2binary #(parameter N=4)
+                    {
+                       input [N-1:0] g_1;
+                       output wire [N-1: 0] b_0;
+                    }
+                       wire [N-1:0] Temp;
+                       assign temp [N-1] = g_i[N-1]; 
+                       genvar i;
+                       generate
+                       for (i=N-2; 1>= 0; i = i-1)
+                           begin 
+                           assign temp(i) = temp(i+1)*g_i[1];
+                           end
+                           end generates
+         Any individual bit of a vector can be selected and assigned to a new Var. 
+                      Eg: reg [3:0] count;
+                          count [3] = 1'b1; //assigned to 1 MSB 
+                          count [2] = 1'b0; //assigned to 0 to bit no. 3
+              Even some portion of vector can also be selected and assigned
+                      Eg: reg [7:0] count;
+                          count [6:4] =3'b110;
+     -------------------------------------------------------------------------------------------------------------------------------                     
+                           Array in Verilog
+         A vector is a single element that is n bits wide but arrays are multiple elements that are 1 bit or n-bit wide.
+         It is allowed for reg, integer, time and real data type.
+               Eg: integer count [o:7] ; // array having 8 rows
+                   integer [0:7] count; // Vector                                01234567 
+                   integer matrix [2:0][3:0] // array                         2  [  |    |    |   ]
+                                                                              1  [  |    |    |   ]
+                                                                              0  [  |    |    |   ] 
+                                                                                  3   2    1    0
+                                                                                
+                   reg [2:0] mem[0:3] //                                      3  [  |    |    ]
+                                                                              2  [  |    |    ]
+                                                                              1  [  |    |    ]      
+                                                                              0  [  |    |    ]
+                                                                                  2   1    0
+                                                                                
+                   mem [2] = 3'b110; //                                       0  [  |    |    ]
+                                                                              1  [  |    |    ]
+                                                                              2  [  |    |    ]
+                                                                              3  [  |    |    ]
+                                                                                  0   1    2
+                                    R     C
+                    reg [2:0] mem[0:2] [0: 2] // array
+                    mem [0][0] = 3'b001;
+                    mem [1][2] = 3'b0ll;
+                    mem [2][1] = 3'bl01;
+          ------------------------------------------------------------------------------------------------------------------------------------
+                      Module in Verilog (stucture in Verilog)
+          Module:
+             This is the basic building blocks in verilog.It can be a single element or collection of lower design blocks.It hides internal Implementation.
+                   Syntax: 
+                   module <name of module> (<terminal portlist>);
+                          <post declaration>
+                          <functionality>
+                   endmodule // no ( ; )  at the end
+         ----Module and endmodule are Keyword
+         ----Module represents the design that implements the certain behavioral char.
+         ----All variable declaration,terminal port,functionality of design are defined within module and endmodule 
+         ----We can include module within module is called module instantiation
+         ----Module can be reused
+                          Eg: module counter ();
+                              _ _ _ _ _ _ _ _ _ _ 
+                              _ _ _ _ _ _ _ _ _ _
+                             end module
+               ----------------------------------------------------------------------------------------------------------------------------------
+           Port : 
+                 Modules are connected by ports. A part can be input output or inout 
+                 Same name not used for different ports.
+                         Eg: module andgt(a, b,y);
+                             input a;
+                             input b; //input a, b;
+                             output y; //output port
+                             assign y = a & b; //gives result
+                             end module
+                          Eg : module andgt (input a,input b,output y);
+                               assign y = a&b ; // given result
+                               endmodule
+                 Port are used to send or receive data from outside world.
+                 
+           Syntax:
+                    input <net type> <rage> input port name;
+                    inout <net type> <rage> inout port name;
+                    output <net type> <range> output port name;
+                Input - design module receives from output using 
+                
+                
+                to be continue........
